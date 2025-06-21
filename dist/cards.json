@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "title": "Heading 1",
+    "text": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "More details about this car can be added here."
+    ],
+    "image": "https://res.cloudinary.com/total-dealer/image/upload/v1687754017/test/brisbane_vgpzva.jpg",
+    "button": "Button 1"
+  },
+  {
+    "id": 2,
+    "title": "Heading 2",
+    "text": [
+      "Minima iusto facilis nam doloribus enim."
+    ],
+    "image": "https://res.cloudinary.com/total-dealer/image/upload/v1687754017/test/brisbane_vgpzva.jpg",
+    "button": "Button 2"
+  },
+  {
+    "id": 3,
+    "title": "Heading 3",
+    "text": [
+      "Lorem ipsum dolor sit amet consectetur.",
+      "Architecto alias dolorem molestias."
+    ],
+    "image": "https://res.cloudinary.com/total-dealer/image/upload/v1687754017/test/brisbane_vgpzva.jpg",
+    "button": "Button 3"
+  }
+]
