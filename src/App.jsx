@@ -1,3 +1,4 @@
+import Header from './components/Card/Header.jsx';
 import React, { useEffect, useState } from 'react';
 import Card from './components/Card/Card';
 
@@ -19,7 +20,7 @@ function App() {
             id: 1,
             title: "Heading 1",
             text: [
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
           
             ],
             image: "https://res.cloudinary.com/total-dealer/image/upload/v1687754017/test/brisbane_vgpzva.jpg",
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-black">
+      <Header />
       {/* Hero Section with overlay and CTA */}
       <section
         className="relative h-[500px] bg-cover bg-center"
@@ -75,7 +77,7 @@ function App() {
       </section>
 
       {/* Cards Section */}
-      <section className="py-12">
+      <section className="py-12 bg-white dark:bg-gray-900 text-black dark:text-white">
         <div className="max-w-6xl mx-auto px-4">
           {loading ? (
             <p className="text-center">Loading...</p>
