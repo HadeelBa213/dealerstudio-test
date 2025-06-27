@@ -4,8 +4,9 @@ function Card({ image, title, text, button, isActive, onClick }) {
   return (
     <div
       data-testid="card"
-      className={`rounded-lg overflow-hidden shadow-md transition-all duration-300
-        border ${isActive ? 'border-blue-600 border-4' : 'border-transparent'}`}
+      className={`rounded-lg overflow-hidden shadow-md dark:shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg dark:hover:shadow-2xl
+        border ${isActive ? 'border-blue-600 dark:border-purple-500 border-4 shadow-lg dark:shadow-purple-500/25' : 'border-gray-200 dark:border-gray-700'}
+        bg-white dark:bg-gray-800`}
     >
       <div className="relative w-full h-40">
         <img
@@ -39,7 +40,7 @@ function Card({ image, title, text, button, isActive, onClick }) {
         </div>
 
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-md w-full text-sm font-medium mt-4"
+          className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-purple-600 dark:to-purple-700 dark:hover:from-purple-700 dark:hover:to-purple-800 text-white px-6 py-2 rounded-full shadow-md w-full text-sm font-medium mt-4 transition-all duration-300 transform hover:scale-105"
           onClick={onClick}
         >
           {button}
