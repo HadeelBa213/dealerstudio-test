@@ -86,18 +86,37 @@ function App() {
           ) : error ? (
             <p className="text-center text-red-500 transition-colors duration-300">{error}</p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-              {cards.map((card) => (
-                <Card
-                  key={card.id}
-                  image={card.image}
-                  title={card.title}
-                  text={card.text}
-                  button={card.button}
-                  isActive={activeCard === card.id}
-                  onClick={() => setActiveCard(card.id)}
-                />
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-items-center">
+           {cards.map((card, index) => {
+  const isLastCardAndOdd = cards.length % 2 !== 0 && index === cards.length - 1;
+
+  return (
+    <div
+      key={card.id}
+      className={
+        isLastCardAndOdd
+          ? 'sm:col-span-2 sm:flex sm:justify-center lg:col-span-1' 
+          : ''
+      }
+    >
+      <div
+        className="w-full max-w-[320px]"
+      >
+        <Card
+          image={card.image}
+          title={card.title}
+          text={card.text}
+          button={card.button}
+          isActive={activeCard === card.id}
+          onClick={() => setActiveCard(card.id)}
+        />
+      </div>
+    </div>
+  );
+})}
+
+
+
             </div>
           )}
         </div>
